@@ -14,3 +14,4 @@ public class LeaseContractFull {
     private Customer customer;
     private String idCar;
     
+}
