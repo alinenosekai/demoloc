@@ -30,7 +30,7 @@ public class DataLeaseContractRepository implements LeaseContractRepository {
         return iDataLeaseContract.findByIdCustomer(idCustomer);
     }
 
-    public List<LeaseContract> findByIdCar(Integer idCar) {
+    public List<LeaseContract> findByIdCar(String idCar) {
         return iDataLeaseContract.findByIdCar(idCar);
     }
 
@@ -39,4 +39,5 @@ public class DataLeaseContractRepository implements LeaseContractRepository {
         return iDataLeaseContract.save(leaseContract);
     }
 }
+
 
