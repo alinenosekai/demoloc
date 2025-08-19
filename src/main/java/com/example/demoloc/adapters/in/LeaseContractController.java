@@ -1,5 +1,6 @@
 package com.example.demoloc.adapters.in;
 
+import com.example.demoloc.adapters.in.exception.ResourceNotFoundException;
 import com.example.demoloc.domain.model.LeaseContract;
 import com.example.demoloc.domain.model.LeaseContractFull;
 import com.example.demoloc.domain.service.LeaseContractService;
@@ -108,3 +109,4 @@ public class LeaseContractController {
         }
     }
 }
+
