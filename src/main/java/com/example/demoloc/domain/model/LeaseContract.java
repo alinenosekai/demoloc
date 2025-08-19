@@ -20,9 +20,10 @@ public class LeaseContract {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String refLeaseContract;
-    private DateTime startContract;
-    private DateTime endContract;
+    private LocalDateTime startContract;
+    private LocalDateTime endContract;
     private String idCar;
     private Integer idCustomer;
     private String statusLeaseContract; 
 }
+
