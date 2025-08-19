@@ -32,6 +32,10 @@ public class LeaseContractService {
         return contractRepository.findAll();
     }
 
+    public List<LeaseContract> findByIdCustomer(Integer idCustomer) {
+         return contractRepository.findByIdCustomer(idCustomer);    
+    }
+
     public List<LeaseContract> findByIdCar(String idCar) {
         return contractRepository.findByIdCar(idcar);
     }
@@ -78,4 +82,5 @@ public class LeaseContractService {
         contractRepository.save(leaseContract);
     }
 }
+
 
