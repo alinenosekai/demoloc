@@ -8,7 +8,8 @@ import java.util.List;
 public interface IDataLeaseContractRepository extends JpaRepository<LeaseContract, Integer> {
     
     List<LeaseContract> findByIdCustomer(Integer idCustomer);
-    List<LeaseContract> findByIdCar(Integer idCar);
+    List<LeaseContract> findByIdCar(String idCar);
 }
+
 
 
