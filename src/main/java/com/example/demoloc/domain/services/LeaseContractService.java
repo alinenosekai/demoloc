@@ -8,7 +8,7 @@ import com.example.demoloc.domain.model.LeaseContractFull;
 import com.example.demoloc.domain.ports.CarRepository;
 import com.example.demoloc.domain.ports.CustomerRepository;
 import com.example.demoloc.domain.ports.LeaseContractRepository;
-com.example.demoloc.domain.service.CustomerService;
+import com.example.demoloc.domain.service.CustomerService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -87,3 +87,4 @@ public class LeaseContractService {
         contractRepository.save(leaseContract);
     }
 }
+
