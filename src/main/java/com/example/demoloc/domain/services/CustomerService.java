@@ -44,8 +44,9 @@ public class CustomerService {
         customer.setEmail(email);
         customer.setPhone(phone);
         customer.setDateBirth(dateBirth);
-        customer.setLicenceCar(licenseCar);
+        customer.setLicenseCar(licenseCar);
 
         return repository.save(customer);
     }
 }
+
