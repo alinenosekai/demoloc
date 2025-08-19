@@ -8,6 +8,7 @@ import com.example.demoloc.domain.model.LeaseContractFull;
 import com.example.demoloc.domain.ports.CarRepository;
 import com.example.demoloc.domain.ports.CustomerRepository;
 import com.example.demoloc.domain.ports.LeaseContractRepository;
+com.example.demoloc.domain.service.CustomerService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,26 +19,30 @@ public class LeaseContractService {
     private final LeaseContractRepository contractRepository;
     private final CustomerRepository customerRepository;
     private final CarRepository carRepository;
+    private final CustomerService customerService;
+
 
     @Autowired
     public LeaseContractService(LeaseContractRepository contractRepository,
                                 CustomerRepository customerRepository,
-                                CarRepository carRepository) {
+                                CarRepository carRepository,
+                                CustomerService customerService) {
         this.contractRepository = contractRepository;
         this.customerRepository = customerRepository;
         this.carRepository = carRepository;
+        this.customerService = customerService;
     }
 
     public List<LeaseContract> listAllLeaseContract() {
         return contractRepository.findAll();
     }
 
-    public List<LeaseContract> findByIdCustomer(Integer idCustomer) {
-         return contractRepository.findByIdCustomer(idCustomer);    
-    }
-
     public List<LeaseContract> findByIdCar(String idCar) {
         return contractRepository.findByIdCar(idCar);
+    }
+
+    public List<LeaseContract> findByIdCustomer(Integer idCustomer) {
+         return contractRepository.findByIdCustomer(idCustomer);    
     }
 
     @Transactional
@@ -55,7 +60,7 @@ public class LeaseContractService {
             throw new ResourceNotFoundException("Customer information is missing");
         }
 
-        Customer customerSaved = customerRepository.addCustomer(
+        Customer customerSaved = customerService.addCustomer(
             customer.getLastName(), 
             customer.getFirstName(),
             customer.getAddress(),
@@ -82,6 +87,3 @@ public class LeaseContractService {
         contractRepository.save(leaseContract);
     }
 }
-
-
-
