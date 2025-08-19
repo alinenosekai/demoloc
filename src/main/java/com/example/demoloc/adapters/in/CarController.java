@@ -1,5 +1,6 @@
 package com.example.demoloc.adapters.in;
 
+import com.example.demoloc.adapters.in.exception.ResourceNotFoundException;
 import com.example.demoloc.domain.model.Car;
 import com.example.demoloc.domain.service.CarService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -84,3 +85,4 @@ public class CarController {
         }
     }
 }
+
