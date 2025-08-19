@@ -32,6 +32,10 @@ public class LeaseContractService {
         return contractRepository.findAll();
     }
 
+    public List<LeaseContract> findByIdCar(String idCar) {
+        return contractRepository.findByIdCar(idcar);
+    }
+
     @Transactional
     public LeaseContract addLeaseContract(LeaseContractFull leaseContractFull) {
 
@@ -74,3 +78,4 @@ public class LeaseContractService {
         contractRepository.save(leaseContract);
     }
 }
+
