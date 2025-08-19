@@ -80,9 +80,9 @@ public class LeaseContractController {
             LeaseContract leaseContractSaved = leaseContractService.addLeaseContract(newLeaseContractFull);
             return ResponseEntity.status(HttpStatus.CREATED).body(leaseContractSaved.getId());
         } catch (ResourceNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(HttpStatus.NOT_FOUND);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erreur serveur inattendue");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
@@ -109,5 +109,6 @@ public class LeaseContractController {
         }
     }
 }
+
 
 
