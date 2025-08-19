@@ -1,5 +1,6 @@
 package com.example.demoloc.adapters.in;
 
+import com.example.demoloc.adapters.in.exception.ResourceNotFoundException;
 import com.example.demoloc.domain.model.Customer;
 import com.example.demoloc.domain.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -113,3 +114,4 @@ public class CustomerController {
         }                    
     }
 }
+
