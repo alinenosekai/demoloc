@@ -7,8 +7,9 @@ import java.util.Optional;
 public interface LeaseContractRepository {
     Optional<LeaseContract> findById(Integer id);
     List<LeaseContract> findByIdCustomer(Integer idCustomer);
-    List<LeaseContract> findByIdCar(Integer idCar);
+    List<LeaseContract> findByIdCar(String idCar);
     List<LeaseContract> findAll();
     LeaseContract save(LeaseContract leaseContract);
 }
+
 
