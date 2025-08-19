@@ -55,7 +55,7 @@ public class LeaseContractController {
     @GetMapping("/findByIdCar")
     public ResponseEntity<List<LeaseContract>> getByIdCar(
         @Parameter(description = "ID de la voiture", required = true)
-        @RequestParam("idCar") Integer id) {
+        @RequestParam("idCar") String id) {
         
         List<LeaseContract> contracts = leaseContractService.findByIdCar(id);
     
@@ -109,4 +109,5 @@ public class LeaseContractController {
         }
     }
 }
+
 
