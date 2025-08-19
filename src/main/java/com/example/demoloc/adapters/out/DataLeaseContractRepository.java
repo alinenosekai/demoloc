@@ -26,12 +26,10 @@ public class DataLeaseContractRepository implements LeaseContractRepository {
         return iDataLeaseContract.findAll();
     }
 
-    @Override
     public List<LeaseContract> findByIdCustomer(Integer idCustomer) {
         return iDataLeaseContract.findByIdCustomer(idCustomer);
     }
 
-    @Override
     public List<LeaseContract> findByIdCar(Integer idCar) {
         return iDataLeaseContract.findByIdCar(idCar);
     }
@@ -41,3 +39,4 @@ public class DataLeaseContractRepository implements LeaseContractRepository {
         return iDataLeaseContract.save(leaseContract);
     }
 }
+
