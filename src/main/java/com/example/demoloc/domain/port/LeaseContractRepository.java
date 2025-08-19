@@ -4,10 +4,11 @@ import com.example.demoloc.domain.model.LeaseContract;
 import java.util.List;
 import java.util.Optional;
 
-public interface LeaseContract {
+public interface LeaseContractRepository {
     Optional<LeaseContract> findById(Integer id);
     List<LeaseContract> findByIdCustomer(Integer idCustomer);
     List<LeaseContract> findByIdCar(Integer idCar);
     List<LeaseContract> findAll();
     LeaseContract save(LeaseContract leaseContract);
 }
+
